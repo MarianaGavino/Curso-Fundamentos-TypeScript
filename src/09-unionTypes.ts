@@ -3,7 +3,7 @@
   userId = 123;
   userId = 'AB';
 
-  function greeting  (myText: string | number) {
+  const greeting = (myText: string | number) => {
     if (typeof myText === 'string') {
       console.log(`string ${myText.toUpperCase()}`);
     } else {
