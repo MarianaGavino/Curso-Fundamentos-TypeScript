@@ -1,5 +1,5 @@
 (() => {
-  let isEnable = true;
+  let isEnable: boolean = true;
   isEnable = false;
 
   let isNew: boolean = false;
