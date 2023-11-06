@@ -1,24 +1,15 @@
 (() => {
-  const login = (data: { email: string; password: string }) => {
-    console.log(data.email, data.password);
-  };
-  // login('example@example.com', "12345");
-  login({
-    email: 'example@example.com',
-    password: 'pass123',
-  });
-
-
   type Sizes = 'S' | 'M' | 'L';
-
-  const products: any[] = [];
-
-  const addProduct = (data: {
+  type Product = {
     title: string;
     createdAt: Date;
     stock: number;
     size?: Sizes; //La variable es opcional
-  }) => {
+  };
+
+  const products: Product[] = [];
+
+  const addProduct = (data: Product) => {
     products.unshift(data);
   };
 
@@ -35,4 +26,13 @@
   });
 
   console.log(products);
-})();
+
+  products.unshift({
+    title: 'Product3',
+    createdAt: new Date(2023, 1, 2),
+    stock: 20,
+    size: 'S'
+  })
+
+
+}) ();
